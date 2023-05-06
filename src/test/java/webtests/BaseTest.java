@@ -1,6 +1,7 @@
 package webtests;
 
 import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
 
 public class BaseTest {
@@ -8,7 +9,8 @@ public class BaseTest {
 
     @BeforeSuite
     public void setRunHeadless() {
-        Configuration.headless = true;
+        Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
+        //Configuration.headless = true;
         Configuration.timeout = 100000;
     }
 }

@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Condition.*;
 public class LoginTest extends BaseTest {
 
     @BeforeMethod
+
     public void openTestingPage() {
         open(urlPath);
     }

@@ -32,6 +32,10 @@ public class AdminTabTest extends BaseTest {
     }
 
     @Test
+    public void myFirsWebOpening() {
+        open(urlPath);
+    }
+    @Test
     public void testAdminTopbarMenuUserManagementDropdownSizeIs1() {
         String jobDropdownArrowXPath = "//nav[@aria-label='Topbar Menu']//span[contains(text(), 'User')]/i";
         $x(jobDropdownArrowXPath).click();
